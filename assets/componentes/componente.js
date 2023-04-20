@@ -2,6 +2,9 @@ import config from "./config.js";
 let storage = JSON.parse(localStorage.getItem('data'))
 export default {
     show_all(){
+        let img = document.querySelector('img');
+
+
         config.storage()
         console.log(storage.info_data.api);
         async function get_pokemon_info(pokemon_name){
