@@ -1,28 +1,39 @@
 import config from "./config.js";
 let storage = JSON.parse(localStorage.getItem('data'))
+
+let contenedor_pokemones = document.querySelector('section');
+
+
+
 export default {
     show_all(){
-        let img = document.querySelector('img');
-
-
         config.storage()
-        console.log(storage.info_data.api);
-        async function get_pokemon_info(pokemon_name){
-            try {
-                let name_pokemon = await fetch(`${storage.info_data.api}/${pokemon_name}`);
-                let data = await name_pokemon.json();
-                console.log(data);
-                return data;
-            } catch(error) {
-                console.log(error);
-            };
-        };
-        
-        //Ejemplo de uso de la api
-        get_pokemon_info('pikachu').then(data =>{
-            console.log(data);
-            //aqui se pueden manupular los datos obtenidos según las necesidades
-        })
+        function fetch_Pokemon(id) {
+            fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+            .then(res => res.json())
+            .then(data => console.log(data))
+        }
+        //como respuesta debe almacenar una data específica
+        fetch_Pokemon(1)
+
+        function number_pokemons(number){
+            for (let i = 0; i < number; i++) {
+                fetch_Pokemon(i)
+            }
+        }
+
+        function create_pokemon(pokemon){
+            let card = document.createElementNS('div')
+            card.classList.add('pokemon_block')
+
+            let srite_container = document.createElement('div');
+            srite_container.classList.add('img_container')
+
+            let sprite = document.createElement('img');
+            sprite.src = pokemon.sprites.front_default;
+        }
+
+        number_pokemons(9)
     }
 }
 

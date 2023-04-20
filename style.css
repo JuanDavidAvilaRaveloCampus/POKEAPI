@@ -4,25 +4,89 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+    /* min-height: 100vh ;
+    min-width: 100vw; */
+    /* overflow: hidden; */
 }
 
-section { /* contenedor de la card */
-    min-width: 100vw;
-    min-height: 100vh;
+nav {
     display: flex;
-    background-color: blue;
     justify-content: center;
+    position: relative;
+    height: 24vh;
+    background-image: url(./assets/img/International_Pokémon_logo.svg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+nav div {
+    position: absolute;
+    align-self: end;
+}
+
+nav div form {
+    position: relative;
+    justify-content: center;
+}   
+
+nav div form input {
+    margin: .5rem 0 ;
+    font-size: 1.2rem;
+
+}
+
+nav div form .input_search{
+    height: 2rem;
+    background-color: #efefef;
+    border-radius: 5px;
+    border: none;
+}
+
+nav div form #btn {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: none;
+    background: none;
+    border-radius: 100%;
+    
+}
+
+nav div form .icono {
+    position: absolute;
+    right: -.5rem;
+    top: 35% ;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+section { /* contenedor de la card */ 
+
+    /* contenedor de pokemones */
+    
+    display: grid;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 200px;
+    width: 90%;
+    padding: 60px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 
 
 .card {
-    align-self: center;
     background-color: brown;
-    width: 20rem;
-    height: 25rem;
+    width: 90vw;
+    height: 70vh;
     position: relative;
     overflow: hidden;
+    object-fit: cover;
+    /* margin: 5%; */
 }
 
 .card_img{ /* card */
@@ -53,6 +117,16 @@ section { /* contenedor de la card */
     /* animation-timeline: unset; */
     /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
 }
+
+
+
+.text_card h2{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 7rem;
+    z-index: -10;
+}
+
 
 @keyframes subir {
     0% {
