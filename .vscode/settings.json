@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "Card_animation",
-        "css, componente.js"
+        "css, componente.js",
+        "new funtion"
     ]
 }
