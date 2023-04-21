@@ -1,61 +1,115 @@
+import 'animate.css';
+
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Amatic SC', cursive;
-    /* min-height: 100vh ;
-    /* overflow: hidden; */
 }
 
-header .container_all    {
-    height: 20vh;
-
-    /* background-color: blue; */
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-header .container_all .container_img {
+.logo {
+    width: 30vw;
+    height: 30vh;
     background-image: url(./assets/img/International_Pokémon_logo.svg.png);
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 90%;
-    margin: 2rem 1rem 1rem;
-
-    /* display: flex;
-    flex-wrap: wrap; */
 }
 
-header .container_all    div form {
+.container_formulario {
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
 
-header .container_all    div form [name = "buscador"]{
-    height: 4rem;
-    border: none;
-    font-size: 1.5rem;
+#formulario input {
+    width: 30vw;
+    height: 4vh;
+    font-size: 2rem;
     border-radius: 5px;
+    border: none;
     background-color: #efefef;
+    margin-bottom: 5rem;
 }
 
-header .container_all    div form #btn {
+
+#formulario #btn {
     display: none;
 }
 
 
-main section {
-    margin-top: 7vh;
-    /* background-color: red; */
-    height: auto;
+.container_cards {
+    width: 100vw;
+    height: 100vh;
+
+    gap: 4rem;
+    margin: 5rem;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: row;
 }
 
-article {
-    /* background-color: yellow; */
+.card {
+    width: 10vw;
+    height: 25vh;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.img_card {
+    /* transition: 1s; */
+    /* bottom: 0%; */
+    width: 10vw;
+    height: 25vh;
     
-    height: 30rem;
-    background-color: red;
+    position: absolute;
+    z-index: 10;
+
+    background-color: white;
 }
 
-.img_pokemon {
-    background-image: url(./assets/img/pikatsu.png);
+/* .card:hover .img_card { */
+    
+    /* bottom: 100%; */
+/* } */
+
+.stadistics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+
 }
+
+.stadistics h3, .stadistics span{
+    margin: 0;
+}
+
+
+
+footer {
+    background-color: #d1d1d1;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+}
+
 

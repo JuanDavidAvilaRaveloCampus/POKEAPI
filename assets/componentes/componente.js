@@ -1,4 +1,5 @@
 import config from "./config.js";
+// import 'animate.css';
 let storage = JSON.parse(localStorage.getItem('data'));
 
 const fetch_Pokemon = async (name) =>{
@@ -20,34 +21,57 @@ const fetch_Pokemon = async (name) =>{
         let estadisticas = await data.stats
         // let hp = await data.stats[0].base_stat;
 
-        console.log(data);
+        // console.log(data);
 
-        console.log({
-            nombre : name,
-            vida : data.stats[0].base_stat,
-            ataque : data.stats[1].base_stat,
-            velocidad : data.stats[5].base_stat,
-            defensa : data.stats[2].base_stat,
-            ataque_especial : data.stats[3].base_stat,
-            defensa_especial : data.stats[4].base_stat
-        });
+        // console.log({
+        //     nombre : name,
+        //     vida : data.stats[0].base_stat,
+        //     ataque : data.stats[1].base_stat,
+        //     velocidad : data.stats[5].base_stat,
+        //     defensa : data.stats[2].base_stat,
+        //     ataque_especial : data.stats[3].base_stat,
+        //     defensa_especial : data.stats[4].base_stat
+        // });
 
 
-        pintarCard(data.id,name)
+        pintarCard(data.id,nombre,vida,ataque,velocidad,defensa,ataque_especial,defensa_especial);
 
     } catch (error) {
         console.log(error);
     }
 };
 
-function pintarCard(id,name){
+function pintarCard(id,nombre,vida,ataque,velocidad,defensa,ataque_especial,defensa_especial){
     console.log(id);
     document.querySelector('#cards').insertAdjacentHTML('beforeend',`   
         <div class="card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg" alt="" class="img_card">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg" alt="" class="img_card animate__animated">
             <div class="info_card">
-                <h2>${name}</h2>
-                
+                <h2>${nombre}</h2>
+                <div class="stadistics">
+                    <h2>HP</h2>
+                    <span>${vida}</span>
+                </div>
+                <div class="stadistics">
+                    <h3>Ataque</h3>
+                    <span>${ataque}</span>
+                </div>
+                <div class="stadistics">
+                    <h3>Defensa</h3>
+                    <span>${defensa}</span>
+                </div>
+                <div class="stadistics">
+                    <h3>Velocidad</h3>
+                    <span>${velocidad}</span>
+                </div>
+                <div class="stadistics">
+                    <h3>Ataque Especial</h3>
+                    <span>${ataque_especial}</span>
+                </div>
+                <div class="stadistics">
+                    <h3>Defensa especial</h3>
+                    <span>${defensa_especial}</span>
+                </div>
                 <img src="" alt="">
                 <p></p>
             </div>
@@ -97,17 +121,9 @@ export default {
             
             fetch_Pokemon(`${formulario.buscador}`);
             // img(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-
-
             // fetch_Pokemon()
-
-            
                     // .then(res => res.json())
                     // .then(data => console.log(data))
-                
-
-
-                
             },
 
 
@@ -117,6 +133,12 @@ export default {
 
 
         )
+
+        let card = document.querySelector('.card')
+
+        document.querySelector('img_card').addEventListener('mousehover', () => {
+                card.classList.add('animate__flipInY');
+            })
         
     }
 }
