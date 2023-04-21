@@ -13,7 +13,7 @@ export default {
 
             let formulario = Object.fromEntries(new FormData(e.target));
 
-            console.log(formulario);
+            // console.log(formulario);
             
             fetch_Pokemon(`${formulario.buscador}`);
 

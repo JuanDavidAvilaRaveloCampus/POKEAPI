@@ -1,140 +1,61 @@
-
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
     /* min-height: 100vh ;
-    min-width: 100vw; */
     /* overflow: hidden; */
 }
 
-header {
-    margin-bottom: 2rem;
+header .container_all    {
+    height: 20vh;
+
+    /* background-color: blue; */
 }
 
-nav {
-    /* padding: 0; */
-    justify-content: center;
-    height: 25vh;
+header .container_all .container_img {
     background-image: url(./assets/img/International_Pokémon_logo.svg.png);
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position: top;
+    background-size: contain;
+    min-height: 90%;
+    margin: 2rem 1rem 1rem;
+
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
-nav div {
-    position: relative;
-    /* align-self: end; */
-    top: 11rem;
-}
-
-nav div form {
-    position: relative;
-    justify-content: center;
-    min-width: 100%;
-
-    /* width: 10rem; */
+header .container_all    div form {
     display: flex;
     justify-content: center;
-}   
+}
 
-nav div form input {
+header .container_all    div form [name = "buscador"]{
+    height: 4rem;
+    border: none;
     font-size: 1.5rem;
-}
-
-nav div form .input_search{
-    height: 2rem;
-    background-color: #efefef;
     border-radius: 5px;
-    border: none;
-
+    background-color: #efefef;
 }
 
-nav div form #btn {
-    width: 1.2rem;
-    height: 2rem;
-    border: none;
-    background: none;
-    border-radius: 100%;
+header .container_all    div form #btn {
     display: none;
-    /* EL BOTON EXISTE PERO NO SE VE */
-}
-
-section { /* contenedor de la card */ 
-    /* contenedor de pokemones */
-    display: grid;
-    margin: 0 auto;
-    overflow: hidden;
-    min-width: 200px;
-    width: 90%;
-    padding: 20px 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    gap: 1.1rem;
 }
 
 
-
-.card {
-    background-color: brown;
-    max-width: 26rem;
-    height: 40rem;
-    position: relative;
-    overflow: hidden;
-    gap: 1rem;
-    object-fit: cover;
-    /* margin: 5%; */
+main section {
+    margin-top: 7vh;
+    /* background-color: red; */
+    height: auto;
 }
 
-.card_img{ /* card */
-    min-height: 100%;
-    min-width: 100%;
-    background-image: url('https://cdn.statically.io/img/fancyodds.com/wp-content/uploads/2021/11/Simple-Pikachu-Wallpaper-4k.jpg?quality=100&f=auto');
-    background-position: bottom;
-    /* background-color: aqua; */
+article {
+    /* background-color: yellow; */
     
-    position: absolute;
-    top: 0;
-    background-size: cover;
-    overflow: hidden;
-    z-index: 10;
-
-   
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    transition: clip-path .7s ease-in-out; */
+    height: 30rem;
+    background-color: red;
 }
 
-.card:hover .card_img{
-    
-    /* box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1); */
-    animation-name: subir;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-fill-mode: both ;
-    /* animation-timeline: unset; */
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+.img_pokemon {
+    background-image: url(./assets/img/pikatsu.png);
 }
 
-
-
-.text_card h2{
-    text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 7rem;
-    z-index: -10;
-}
-
-
-@keyframes subir {
-    0% {
-        top: 0px;
-        /* background:green; */
-    }
-    100% {
-        top: -100%;
-    }
-
-}
