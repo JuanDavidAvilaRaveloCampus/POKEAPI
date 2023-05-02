@@ -1,0 +1,113 @@
+.stadistics {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: last baseline;
+    
+
+}
+
+.stadistics h3, .stadistics span{
+    margin: 0;
+    color: white;
+}
+
+.stadistics h3 {
+    margin-right: 1rem;
+}
+
+.stadistics span {
+    margin-left: 1rem;
+}
+
+.stadistica {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+.caja_porcentajes {
+    width: 100%;
+}
+
+#porcentaje_vida {
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #ae1f1fda;
+    transition: width 0.5s ease;
+}
+
+#porcentaje_ataque {
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+    /* box-shadow: 3px #ff0088, 1px #d20070; */
+    
+    background-color: #ff0088c8;
+
+    transition: width 0.5s ease;
+
+}
+
+#porcentaje_defensa {
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #00b7ffc4;
+
+    transition: width 0.5s ease;
+
+}
+
+#porcentaje_velocidad{
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #3cff00da;
+
+    transition: width 0.5s ease;
+}
+
+#porcentaje_ataque_especial {
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #ffff00da;
+
+    transition: width 0.5s ease;
+
+}
+
+#porcentaje_defensa_especial {
+    height: .8rem;
+    width: 0%;
+    position: relative;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #7700ffda;
+
+    transition: width 0.5s ease;
+}

@@ -1,0 +1,76 @@
+/* !CARDS */
+.container_cards {
+    width: 100vw;
+    height: 100vh;
+
+    gap: 4rem;
+    margin: 5rem;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card {
+    width: 20rem;
+    height: 30rem;
+
+    box-sizing: border-box;
+    /* box-shadow: 0rem 1rem 8rem -2rem rgba(255, 0, 0, 0.903); */
+
+    position: relative;
+
+}
+
+/* ESA CLASE ES PARA UNA CARD ALEATORIA QUE SE TENDRÁ QUE DESTAPAR */
+.img_sobre {
+    transition: .5s;
+    bottom: 0%;
+    width: 20rem;
+    height: 30rem;
+    
+    position: absolute;
+    z-index: 10;
+}
+
+
+.img_card {
+    width: 18rem;
+    height: 12rem;
+    z-index: -10;
+    justify-content: center;
+    display: flex;
+}
+
+.card:hover .img_sobre{
+    bottom: 100%;
+}
+
+.info_card {
+    padding-top: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    padding:0 5%;
+}  
+
+.name_id {
+    display: flex;
+    justify-content: flex-start;
+
+    color: white;
+}
+
+
+.name_id span {
+    margin: 1.6rem .7rem;
+    font-size: 1.2rem;
+
+
+}
