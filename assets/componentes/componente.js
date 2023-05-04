@@ -80,7 +80,28 @@ function pintarCard(
     console.log(id);
         document.querySelector('#cards').insertAdjacentHTML('beforeend', `   
             <div class="card">
-                <img src="./assets/img/img_banner_pokemon_logo/248737.jpg" alt="" class="img_sobre">
+                <div class= "front">
+                    <div class="container">
+                        <div class="container_pokebola">
+                            <div class="pokebola">
+                                <div class="fondo"></div>
+                                <div class="parte_superior_roja"></div>
+
+                                <div class="centro">
+                                    <div class="centro_fondo">
+                                        <div class="centro_oscuro">
+                                            <div class="centro_un_poco_mas_claro">
+                                                <div class="centro_claro" id="btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="parte_inferior_blaca"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="info_card">
                     
